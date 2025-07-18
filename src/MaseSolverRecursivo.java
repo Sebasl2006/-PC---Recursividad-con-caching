@@ -16,7 +16,7 @@ public class MaseSolverRecursivo implements MazeSolver {
         }
         return new ArrayList<>();
     }
-       
+
     
     private boolean findPath(boolean[][] grid, Cell start, Cell end, List<Cell> path) {
         int row = start.row;

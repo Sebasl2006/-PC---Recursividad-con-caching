@@ -1,14 +1,22 @@
+import java.util.List;
 import java.util.Set;
 
 import models.Cell;
 
-public class Maze {
+public class MazeResult {
+    private List<Cell> path;
+    private Set<Cell> visited;
     private boolean[][] grid;
+
+
+
+    public MazeResult(List<Cell> path, Set<Cell> visited, boolean[][] grid) {
+        this.path = path;
+        this.visited = visited;
+        this.grid = grid;
+    }
     
 
-    public Maze(boolean[][] maze) {
-       this.grid = maze;
-    }
 
     public void printMaze() {
 
@@ -26,4 +34,13 @@ public class Maze {
         return grid;
     }
 
+
+
+    public Set<Cell> getVisited() {
+        return visited;
+    }
+
 }
+
+
+

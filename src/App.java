@@ -32,16 +32,17 @@ public class App {
             {true, true, true, true}
         };
         Maze maze = new Maze(predefineMaze);
-        System.out.println("Laberinto cargado");
+        System.out.println("Sebastian Lopez");
         maze.printMaze();
 
         Cell start = new Cell(0, 0);
         Cell end = new Cell(3, 3);
         List<MazeSolver> solvers = Arrays.asList(
-            new MaseSolverRecursivo()
+            new MaseSolverRecursivo(),
+            new MazeSolverRecursiveCompletoBT()
             );
 
-        MazeSolver solver = solvers.get(0);
+        MazeSolver solver = solvers.get(1);
         List<Cell> path;
         path = solver.getPath(maze.getGrid(), start, end);
         System.out.println(path);
